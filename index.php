@@ -1,3 +1,5 @@
+<?php include 'server.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +15,30 @@
 
 </head>
 <body>
-    <div class="container">
-    <h1>My First Bootstrap Page</h1>
-    <p>This part is inside a .container class.</p>
-    <p>The .container class provides a responsive fixed width container.</p>
+
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow-lg" style="width: 24rem;">
+      <h4 class="text-center mb-4">Login</h4>
+
+      <form actions="server.php" method="post">
+        <div class="mb-3">
+          <label for="email"  class="form-label">Email address</label>
+          <input type="text" name="username" class="form-control" id="email" placeholder="Enter your username">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password">
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            
+        </div>
+        <button type="submit" name="login_user" class="btn btn-primary w-100">Login</button>
+      </form>
+
     </div>
+  </div>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
